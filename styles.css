@@ -1,0 +1,375 @@
+/*Параметры для сетки всей страницы*/
+.container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 900px 856px 1038px 767px 220px;
+}
+
+.header {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 1920px;
+    display: grid;
+    grid-template-rows: 50px 50px 1fr 50px 180px;
+    grid-template-columns: 405px repeat(4, 0.25fr) 405px;
+    background-image: url("assets/header-background2.jpg");
+}
+
+/*Текст над меню в шапке*/
+.top {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 1);   
+}
+
+/*Текст слева над меню*/
+.top-left {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+/*Текст справа над меню*/
+.top-right {
+    grid-row: 1/2;
+    grid-column: 5/6;
+    text-align: end;
+}
+
+/*Меню в шапке*/
+.nav_bar {
+    grid-row: 2/3;
+    grid-column: 2/6;
+    list-style-type: none;
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(4, 0.25fr);
+    padding-inline-start: 0px;
+}
+
+/*Ссылки на всей странице*/
+a,
+a:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+/*Оформление компонентов меню в шапке*/
+.nav_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid white;
+}
+
+/*Положение элементов в сетке меню*/
+.nav_item1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.nav_item2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.nav_item3 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+.nav_item4 {
+    grid-row: 1/2;
+    grid-column: 4/5;
+}
+
+/*Оформление кнопок меню в шапке*/
+.button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color:rgba(255, 255, 255, 1);
+    background-color: rgba(153, 134, 42, 1);
+}
+
+.left-button {
+    grid-row: 4/5;
+    grid-column: 3/4;
+    height: 50px;
+    width: 200px;
+}
+
+.right-button {
+    grid-row: 4/5;
+    grid-column: 4/5;
+    height: 50px;
+    width: 200px;
+}
+
+.content-1 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: rgba(40, 40, 40, 1);
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 405px 1fr 405px;
+}
+
+/*Текст под шапкой*/
+.under_header {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    border: 3px solid rgba(196, 196, 196, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 190px;
+    padding-right: 190px;
+    
+}
+
+/*Оформление h2 на всей странице*/
+h2 {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    position: relative;
+}
+
+/*Декоративная линия под h2*/
+.under_header_h2::after {
+    content: " ";
+    background: rgba(255, 255, 255, 1);
+    width: 160px;
+    height: 1px;
+    bottom: -40px;
+    left: 250px;
+    position: absolute;
+} 
+
+
+.under_header_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+.under_header_img {
+    width: 160px;
+    height: 160px;
+}
+
+.content-2 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    background-color: rgba(230, 227, 196, 1);
+    display: grid;
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-columns: 405px 1fr 80px 1fr 405px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/*Позиционирование блока с таблицей внутри*/
+.content-2_table {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/*Оформление h4 на всей странице*/
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+/*Оформление h3 на всей странице*/
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+}
+
+/*Оформление ячеек и границ в таблице*/
+td {
+    border:  1px solid rgba(40, 40, 40, 1);
+    padding: 19px 26px 19px 26px;
+}
+
+.table {
+    border-collapse: collapse;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+/*Размеры кнопки под таблицей*/
+.undertable_button {
+    width: 254px;
+    height: 50px;
+}
+
+.content-2_img {
+    grid-row: 2/3;
+    grid-column: 4/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.image-top {
+    width: 540px;
+    height: 500px;
+}
+
+.image_bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.image-left, 
+.image-right {
+    width: 255px;
+    height: 228px;
+}
+
+/*Позиционирование формы*/
+.form {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    background-color: rgba(40, 40, 40, 1);
+    display: grid;
+    grid-template-rows: 120px 1fr 100px;
+    grid-template-columns: 405px 1fr 405px;
+}
+
+.form_img_left {
+    float: left;
+    position: relative;
+    Width: 260px;
+    Height: 260px;
+    margin-left: 375px;
+}
+
+.form_img_right {
+    float: right;
+    position: relative;
+    Width: 260px;
+    Height: 200px;
+    margin-left: 750px;
+    margin-top: 20px;
+}
+
+/*Декоративная линия под h2*/
+h2::after {
+    content: " ";
+    background: rgba(255, 255, 255, 1);
+    width: 160px;
+    height: 1px;
+    bottom: -40px;
+    left: 100px;
+    position: absolute;
+}
+
+.form_content {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding-left: 285px;
+    padding-right: 285px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 1);
+    border: 3px solid rgba(196, 196, 196, 1);
+    text-align: center;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.submit_button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color:rgba(255, 255, 255, 1);
+    background-color:rgba(40, 40, 40, 1);
+    border: 1px solid white;
+    width: 541px;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.footer {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    background-color: rgba(153, 132, 49, 1);
+    display: grid;
+    grid-template-rows: 20px 0.5fr 0.5fr 20px;
+    grid-template-columns: 405px 1fr 405px;
+}
+
+/*Позиционирование навигации футера*/
+.footer_nav_bar {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    list-style-type: none;
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 19px 95px;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.footer_nav_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;    
+}
+
+.contacts {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 19px 95px;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.contacts_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;  
+}
+
+.icon {
+    width: 26px;
+    height: 26px;
+}
+
